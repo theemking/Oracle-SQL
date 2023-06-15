@@ -1,0 +1,60 @@
+1
+column title format a15
+column price format $999.99
+select title, price
+from albums;
+
+2
+column title format a18
+column price format $999.99
+select title, price
+from albums;
+
+3
+column price format $999.99 heading 'album|'price'
+select title, price
+albums;
+
+4
+set underline off
+select title, price
+from albums;
+
+5
+column title format a25 heading 'title|-----------------'
+column price format $999.99 heading 'album|price------'
+select title, price 
+from albums;
+
+5.5
+column title format a25 heading 'title|-----------------'
+column price format $999.99 heading 'album|price'
+select title, price 
+from albums;
+
+6
+set underline on
+ttitle right 'list of my albums'
+select title, price 
+from albums;
+
+7
+TTILE CENTER 'list of my albums'
+select title, price 
+from albums;
+
+8
+set linesize 40
+select title, price 
+from albums;
+
+9
+set pagesize 3
+select title, price 
+from albums;
+
+10
+spool 'c:\temp\output.txt'
+btitle, center 'end of report' right 'run by: ' format a20 sql.user
+select title, price
+from albums;
